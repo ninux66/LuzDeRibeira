@@ -1,0 +1,105 @@
+<div class="values-ldr">
+  <div class="values-ldr__inner page-width">
+
+    <div class="values-ldr__pillar">
+      <span class="values-ldr__label">— Hecho a mano</span>
+      <p class="values-ldr__text">Cada pieza sale de nuestras manos. Nunca de una máquina. Taller propio en Ribeira, Galicia.</p>
+    </div>
+
+    <div class="values-ldr__sep" aria-hidden="true"></div>
+
+    <div class="values-ldr__pillar">
+      <span class="values-ldr__label">— Conchas recicladas</span>
+      <p class="values-ldr__text">Recuperadas de la industria marisquera local y de las playas de Ribeira. Upcycling real, no marketing.</p>
+    </div>
+
+    <div class="values-ldr__sep" aria-hidden="true"></div>
+
+    <div class="values-ldr__pillar">
+      <span class="values-ldr__label">— Envío sostenible</span>
+      <p class="values-ldr__text">Embalaje 100% reciclado y sin plásticos. Cada pedido viaja con el mismo cuidado con que fue creado.</p>
+    </div>
+
+  </div>
+</div>
+
+{% stylesheet %}
+  .values-ldr {
+    background: #1a2744;
+    padding: 72px 0;
+  }
+
+  .values-ldr__inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .values-ldr__pillar {
+    flex: 1;
+    padding: 0 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .values-ldr__pillar:first-child {
+    padding-left: 0;
+  }
+
+  .values-ldr__pillar:last-child {
+    padding-right: 0;
+  }
+
+  .values-ldr__sep {
+    width: 1px;
+    background: rgba(245, 240, 232, 0.18);
+    align-self: stretch;
+    flex-shrink: 0;
+  }
+
+  .values-ldr__label {
+    font-family: var(--font-body--family);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    color: #c9a84c;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  .values-ldr__text {
+    font-family: var(--font-body--family);
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: rgba(245, 240, 232, 0.75);
+    margin: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .values-ldr__inner {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .values-ldr__sep {
+      height: 1px;
+      width: 100%;
+      align-self: auto;
+    }
+
+    .values-ldr__pillar {
+      padding: 0;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Valores — Luz de Ribeira",
+  "tag": "section",
+  "class": "values-ldr-wrapper",
+  "settings": [],
+  "presets": [{ "name": "Valores — Luz de Ribeira" }]
+}
+{% endschema %}
