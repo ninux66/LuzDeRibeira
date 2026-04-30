@@ -197,8 +197,8 @@
                 "accordion_row_NdBezV": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Description",
-                    "open_by_default": false,
+                    "heading": "Descripción",
+                    "open_by_default": true,
                     "icon": "none",
                     "width": 20
                   },
@@ -236,7 +236,7 @@
                 "accordion_row_iJM37V": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Care",
+                    "heading": "Cuidados",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -245,7 +245,7 @@
                     "text_VdG98J": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>To maintain the beauty and integrity of your purchase, we recommend treating it with care. Simple maintenance practices, such as gentle washing and proper storage, can effectively preserve the longevity of your favorites. We encourage you to refer to the care instructions included with each item, designed to help you keep your purchase in top condition.</p>",
+                        "text": "<p>Las conchas naturales son sensibles a la humedad prolongada y a los productos químicos. Para los cuadros: evitar exposición directa al sol y la humedad. Para la joyería: retirar antes de ducharse o bañarse en el mar. Limpiar con un paño suave y seco. Cada pieza incluye instrucciones de cuidado individuales.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -275,7 +275,7 @@
                 "accordion_row_pLFDcD": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Design",
+                    "heading": "Sobre la pieza",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -284,7 +284,7 @@
                     "text_qLGEN9": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Our dedication to excellence extends beyond materials; it encompasses the artistry and craftsmanship illustrated in every piece we create.</p>",
+                        "text": "<p>Cada pieza de Luz de Ribeira es única e irrepetible. Las conchas son recogidas a mano en las costas de Ribeira o recuperadas de la industria marisquera local, limpiadas una a una y montadas con materiales de conservación de larga duración. Incluye certificado de autenticidad firmado.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -347,7 +347,7 @@
           "type": "text",
           "name": "t:names.header",
           "settings": {
-            "text": "<h3>You may also like</h3>",
+            "text": "<h3>También te puede gustar</h3>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",

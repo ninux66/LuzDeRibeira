@@ -6,8 +6,7 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */
-{
+ */{
   "sections": {
     "hero_iyt6zg": {
       "type": "hero",
@@ -32,7 +31,7 @@
             "background_color": "#00000026",
             "corner_radius": 0,
             "padding-block-start": 0,
-            "padding-block-end": 8,
+            "padding-block-end": 12,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
@@ -40,7 +39,7 @@
         },
         "text_tzGazA": {
           "type": "text",
-          "name": "t:names.text",
+          "name": "Titular principal",
           "settings": {
             "text": "<h1>Donde la costa <br/><em>se vuelve arte</em></h1>",
             "width": "fit-content",
@@ -83,8 +82,8 @@
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
-            "padding-block-start": 16,
-            "padding-block-end": 32,
+            "padding-block-start": 20,
+            "padding-block-end": 36,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
@@ -142,6 +141,329 @@
         "reflection_opacity": 75,
         "padding-block-start": 0,
         "padding-block-end": 0
+      }
+    },
+    "values_ldr001": {
+      "type": "section",
+      "blocks": {
+        "pillar_1": {
+          "type": "group",
+          "name": "Hecho a mano",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 10,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "heading_p1": {
+              "type": "text",
+              "name": "Título",
+              "settings": {
+                "text": "<h4>— Hecho a mano</h4>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h5",
+                "font": "var(--font-heading--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "body_p1": {
+              "type": "text",
+              "name": "Descripción",
+              "settings": {
+                "text": "<p>Cada pieza sale de nuestras manos. Nunca de una máquina. Taller propio en Ribeira, Galicia.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "body-loose",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["heading_p1", "body_p1"]
+        },
+        "pillar_2": {
+          "type": "group",
+          "name": "Materiales reciclados",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 10,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "heading_p2": {
+              "type": "text",
+              "name": "Título",
+              "settings": {
+                "text": "<h4>— Conchas recicladas</h4>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h5",
+                "font": "var(--font-heading--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "body_p2": {
+              "type": "text",
+              "name": "Descripción",
+              "settings": {
+                "text": "<p>Recuperadas de la industria marisquera local y de las playas de Ribeira. Upcycling real, no marketing.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "body-loose",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["heading_p2", "body_p2"]
+        },
+        "pillar_3": {
+          "type": "group",
+          "name": "Envío sostenible",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "flex-start",
+            "gap": 10,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "heading_p3": {
+              "type": "text",
+              "name": "Título",
+              "settings": {
+                "text": "<h4>— Envío sostenible</h4>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h5",
+                "font": "var(--font-heading--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "body_p3": {
+              "type": "text",
+              "name": "Descripción",
+              "settings": {
+                "text": "<p>Embalaje 100% reciclado y sin plásticos. Cada pedido viaja con el mismo cuidado con que fue creado.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "body-loose",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["heading_p3", "body_p3"]
+        }
+      },
+      "block_order": [
+        "pillar_1",
+        "pillar_2",
+        "pillar_3"
+      ],
+      "name": "Propuesta de valor",
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "space-between",
+        "vertical_alignment": "flex-start",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 48,
+        "section_width": "page-width",
+        "section_height": "auto",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-3",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 72,
+        "padding-block-end": 72
       }
     },
     "collection_links_Ut4aMz": {
@@ -280,7 +602,6 @@
       },
       "name": "Pieza Destacada",
       "settings": {
-        "product": "",
         "layout": "media-left",
         "color_scheme": "scheme-3",
         "padding-block-start": 0,
@@ -325,7 +646,7 @@
           "blocks": {
             "product_list_text_zR8Cq9": {
               "type": "_product-list-text",
-              "name": "t:names.collection_title",
+              "name": "Título colección",
               "settings": {
                 "text": "<h3>Novedades de la Temporada</h3>",
                 "width": "100%",
@@ -418,7 +739,6 @@
                 "overlay_color": "#00000026",
                 "overlay_style": "solid",
                 "gradient_direction": "to top",
-                "link": "",
                 "open_in_new_tab": false,
                 "padding-block-start": 2,
                 "padding-block-end": 0,
@@ -457,7 +777,6 @@
                     "overlay_color": "#00000026",
                     "overlay_style": "solid",
                     "gradient_direction": "to top",
-                    "link": "",
                     "open_in_new_tab": false,
                     "padding-block-start": 0,
                     "padding-block-end": 0,
@@ -517,68 +836,10 @@
                     "product_title_iRxawi",
                     "price_4XkbjB"
                   ]
-                },
-                "group_cPyTRf": {
-                  "type": "_product-card-group",
-                  "name": "t:names.group",
-                  "settings": {
-                    "content_direction": "column",
-                    "vertical_on_mobile": true,
-                    "horizontal_alignment": "flex-start",
-                    "vertical_alignment": "center",
-                    "align_baseline": false,
-                    "horizontal_alignment_flex_direction_column": "flex-start",
-                    "vertical_alignment_flex_direction_column": "flex-start",
-                    "gap": 0,
-                    "width": "fill",
-                    "custom_width": 40,
-                    "width_mobile": "fill",
-                    "custom_width_mobile": 100,
-                    "height": "fit",
-                    "custom_height": 100,
-                    "inherit_color_scheme": true,
-                    "color_scheme": "",
-                    "background_media": "none",
-                    "video_position": "cover",
-                    "background_image_position": "cover",
-                    "border": "none",
-                    "border_width": 1,
-                    "border_opacity": 100,
-                    "border_radius": 0,
-                    "toggle_overlay": false,
-                    "overlay_color": "#00000026",
-                    "overlay_style": "solid",
-                    "gradient_direction": "to top",
-                    "link": "",
-                    "open_in_new_tab": false,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {
-                    "swatches_tGqDq9": {
-                      "type": "swatches",
-                      "settings": {
-                        "product_swatches_alignment": "flex-end",
-                        "product_swatches_alignment_mobile": "flex-start",
-                        "hide_padding": false,
-                        "product_swatches_padding_top": 0,
-                        "product_swatches_padding_bottom": 0,
-                        "product_swatches_padding_left": 0,
-                        "product_swatches_padding_right": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "swatches_tGqDq9"
-                  ]
                 }
               },
               "block_order": [
-                "group_KJDaTQ",
-                "group_cPyTRf"
+                "group_KJDaTQ"
               ]
             }
           },
@@ -597,7 +858,7 @@
         "columns": 4,
         "mobile_columns": "2",
         "mobile_card_size": "60cqw",
-        "columns_gap": 26,
+        "columns_gap": 24,
         "rows_gap": 36,
         "icons_style": "arrow",
         "icons_shape": "none",
@@ -615,7 +876,7 @@
         "text_69C6UJ": {
           "type": "text",
           "settings": {
-            "text": "<h2>Recogidas con amor.<br/>Recicladas con propósito.</h2>",
+            "text": "<h2>Recogidas con amor.<br/><em>Recicladas con propósito.</em></h2>",
             "width": "fit-content",
             "max_width": "none",
             "alignment": "left",
@@ -640,7 +901,7 @@
         "text_hzq6cM": {
           "type": "text",
           "settings": {
-            "text": "<p><a href=\"/pages/nuestra-historia\" title=\"Nuestra Historia\">Nuestra historia</a></p>",
+            "text": "<p><a href=\"/pages/nuestra-historia\" title=\"Nuestra Historia\">Nuestra historia →</a></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "right",
@@ -667,7 +928,7 @@
         "text_69C6UJ",
         "text_hzq6cM"
       ],
-      "name": "Sostenibilidad",
+      "name": "Sostenibilidad — Imagen de fondo",
       "settings": {
         "media_type_1": "image",
         "media_type_2": "image",
@@ -675,7 +936,6 @@
         "custom_mobile_media": false,
         "media_type_1_mobile": "image",
         "media_type_2_mobile": "image",
-        "link": "",
         "open_in_new_tab": false,
         "content_direction": "row",
         "vertical_on_mobile": true,
@@ -704,7 +964,7 @@
       "blocks": {
         "group_Q6JxNp": {
           "type": "group",
-          "name": "Content",
+          "name": "Texto historia",
           "settings": {
             "content_direction": "column",
             "vertical_on_mobile": true,
@@ -713,7 +973,7 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "center",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 16,
+            "gap": 20,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -733,7 +993,6 @@
             "overlay_color": "#00000026",
             "overlay_style": "solid",
             "gradient_direction": "to top",
-            "link": "",
             "open_in_new_tab": false,
             "placeholder": "",
             "padding-block-start": 0,
@@ -744,16 +1003,42 @@
           "blocks": {
             "text_XmzkXY": {
               "type": "text",
-              "name": "t:names.heading",
+              "name": "Titular historia",
               "settings": {
-                "text": "<h2>Arte que nace del mar y regresa a él</h2>",
+                "text": "<h2>Arte que nace del mar<br/><em>y regresa a él</em></h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "h3",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
+                "font": "var(--font-heading--family)",
+                "font_size": "",
                 "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_desc": {
+              "type": "text",
+              "name": "Descripción historia",
+              "settings": {
+                "text": "<p>Nacimos en las playas de Ribeira, entre conchas que la marea dejaba atrás. Hoy las transformamos en arte que perdura.</p>",
+                "width": "fit-content",
+                "max_width": "narrow",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "",
+                "line_height": "body-loose",
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
@@ -770,7 +1055,7 @@
             },
             "button_aCXUUG": {
               "type": "button",
-              "name": "t:names.button",
+              "name": "CTA Historia",
               "settings": {
                 "label": "NUESTRA HISTORIA",
                 "link": "/pages/nuestra-historia",
@@ -786,12 +1071,13 @@
           },
           "block_order": [
             "text_XmzkXY",
+            "text_desc",
             "button_aCXUUG"
           ]
         },
         "comparison_slider_YEKHnD": {
           "type": "comparison-slider",
-          "name": "t:names.comparison_slider",
+          "name": "Imagen proceso — Antes/Después",
           "settings": {
             "slider_style": "horizontal",
             "show_text": false,
@@ -832,13 +1118,13 @@
         "content_direction": "row",
         "vertical_on_mobile": true,
         "horizontal_alignment": "space-between",
-        "vertical_alignment": "flex-start",
+        "vertical_alignment": "center",
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "center",
-        "gap": 50,
+        "gap": 60,
         "section_width": "page-width",
-        "section_height": "small",
+        "section_height": "auto",
         "section_height_custom": 50,
         "color_scheme": "",
         "background_media": "none",
@@ -852,13 +1138,14 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "padding-block-start": 82,
-        "padding-block-end": 82
+        "padding-block-start": 96,
+        "padding-block-end": 96
       }
     }
   },
   "order": [
     "hero_iyt6zg",
+    "values_ldr001",
     "collection_links_Ut4aMz",
     "featured_product_mTUbKC",
     "product_list_UwRqN4",
