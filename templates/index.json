@@ -10,37 +10,9 @@
 {
   "sections": {
     "hero_iyt6zg": {
-      "type": "hero",
+      "type": "hero-ldr",
       "settings": {
-        "media_type_1": "image",
-        "image_1": "shopify://shop_images/ChatGPT_Image_30_abr_2026_19_41_25_a98c0833-92b6-4f28-a63f-3b748e8dbe43.png",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "link": "",
-        "open_in_new_tab": false,
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "flex-end",
-        "gap": 8,
-        "section_width": "page-width",
-        "section_height": "full-screen",
-        "section_height_custom": 50,
-        "color_scheme": "scheme-6",
-        "toggle_overlay": true,
-        "overlay_color": "#1a2744cc",
-        "overlay_style": "gradient",
-        "gradient_direction": "to top",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 0,
-        "padding-block-end": 72
+        "image": "shopify://shop_images/ChatGPT_Image_30_abr_2026_19_41_25_a98c0833-92b6-4f28-a63f-3b748e8dbe43.png"
       }
     },
     "values_ldr001": {

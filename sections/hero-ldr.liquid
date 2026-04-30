@@ -1,0 +1,156 @@
+<section
+  id="HeroLDR-{{ section.id }}"
+  class="hero-ldr"
+>
+  {%- if section.settings.image != blank -%}
+    <div class="hero-ldr__bg">
+      {{
+        section.settings.image
+        | image_url: width: 3840
+        | image_tag:
+          class: 'hero-ldr__img',
+          widths: '800,1200,1600,1920,2560,3840',
+          sizes: '100vw',
+          fetchpriority: 'high',
+          loading: 'eager',
+          alt: 'Luz de Ribeira — Artesanía Marina'
+      }}
+    </div>
+  {%- endif -%}
+
+  <div class="hero-ldr__overlay"></div>
+
+  <div class="hero-ldr__content">
+    <p class="hero-ldr__tag">Artesanía Marina · Ribeira, Galicia</p>
+    <h1 class="hero-ldr__title">
+      Donde la costa<br>
+      se vuelve arte
+    </h1>
+    <a href="{{ routes.root_url }}collections/all" class="hero-ldr__btn">
+      Descubrir la colección
+    </a>
+  </div>
+</section>
+
+{% stylesheet %}
+  .hero-ldr {
+    position: relative;
+    width: 100%;
+    height: 100svh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .hero-ldr__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-ldr__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+  }
+
+  .hero-ldr__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(26, 39, 68, 0.92) 0%,
+      rgba(26, 39, 68, 0.55) 35%,
+      rgba(26, 39, 68, 0.15) 65%,
+      transparent 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .hero-ldr__content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 0 2rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+  }
+
+  .hero-ldr__tag {
+    font-family: var(--font-body--family);
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    color: rgba(245, 240, 232, 0.80);
+    text-transform: uppercase;
+    margin: 0 0 1.25rem;
+  }
+
+  .hero-ldr__title {
+    font-family: var(--font-heading--family);
+    font-size: clamp(3rem, 8vw, 7.5rem);
+    font-weight: 300;
+    line-height: 0.95;
+    color: #f5f0e8;
+    margin: 0 0 2.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .hero-ldr__btn {
+    display: inline-block;
+    background: #c9a84c;
+    color: #1a2744;
+    font-family: var(--font-body--family);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.1rem 3rem;
+    transition: background 0.25s ease, transform 0.2s ease;
+  }
+
+  .hero-ldr__btn:hover {
+    background: #b89040;
+    transform: translateY(-2px);
+  }
+
+  @media screen and (max-width: 749px) {
+    .hero-ldr__content {
+      padding: 0 1.25rem 3.5rem;
+    }
+
+    .hero-ldr__title {
+      font-size: clamp(2.5rem, 11vw, 4rem);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Hero — Luz de Ribeira",
+  "tag": "section",
+  "class": "hero-ldr-wrapper",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen de fondo"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero — Luz de Ribeira"
+    }
+  ]
+}
+{% endschema %}
