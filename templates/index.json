@@ -11,14 +11,40 @@
     "hero_iyt6zg": {
       "type": "hero",
       "blocks": {
+        "text_tag": {
+          "type": "text",
+          "name": "Etiqueta origen",
+          "settings": {
+            "text": "<p>Artesanía Marina · Ribeira, Galicia</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h6",
+            "font": "var(--font-body--family)",
+            "font_size": "0.75rem",
+            "line_height": "normal",
+            "letter_spacing": "heading-wide",
+            "case": "uppercase",
+            "wrap": "nowrap",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 8,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
         "text_tzGazA": {
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<h1>The Elements <br/>of Style</h1>",
+            "text": "<h1>Donde la costa <br/><em>se vuelve arte</em></h1>",
             "width": "fit-content",
             "max_width": "normal",
-            "alignment": "left",
+            "alignment": "center",
             "type_preset": "custom",
             "font": "var(--font-heading--family)",
             "font_size": "",
@@ -36,10 +62,54 @@
             "padding-inline-end": 0
           },
           "blocks": {}
+        },
+        "text_subtitle": {
+          "type": "text",
+          "name": "Subtítulo hero",
+          "settings": {
+            "text": "<p>Cuadros y joyas únicos, hechos a mano con conchas de las costas gallegas.<br/>Arte sostenible con alma atlántica.</p>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "",
+            "line_height": "body-loose",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 16,
+            "padding-block-end": 32,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "button_cta": {
+          "type": "button",
+          "name": "CTA Principal",
+          "settings": {
+            "label": "DESCUBRIR LA COLECCIÓN",
+            "link": "shopify://collections/all",
+            "open_in_new_tab": false,
+            "style_class": "primary",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "text_tzGazA"
+        "text_tag",
+        "text_tzGazA",
+        "text_subtitle",
+        "button_cta"
       ],
       "settings": {
         "media_type_1": "image",
@@ -56,13 +126,13 @@
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "center",
         "vertical_alignment_flex_direction_column": "center",
-        "gap": 16,
+        "gap": 8,
         "section_width": "page-width",
         "section_height": "full-screen",
         "section_height_custom": 50,
         "color_scheme": "scheme-6",
         "toggle_overlay": true,
-        "overlay_color": "#00000099",
+        "overlay_color": "#1a274499",
         "overlay_style": "gradient",
         "gradient_direction": "to top",
         "blurred_reflection": false,
@@ -78,7 +148,7 @@
           "type": "_collection-link",
           "static": true,
           "settings": {
-            "show_count": true
+            "show_count": false
           },
           "blocks": {
             "title": {
@@ -107,7 +177,7 @@
           "block_order": []
         }
       },
-      "name": "Collection links",
+      "name": "Categorías",
       "settings": {
         "layout": "spotlight",
         "section_width": "page-width",
@@ -203,7 +273,7 @@
           "block_order": []
         }
       },
-      "name": "t:names.featured_product",
+      "name": "Pieza Destacada",
       "settings": {
         "layout": "media-left",
         "color_scheme": "scheme-3",
@@ -251,7 +321,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>New this season</h3>",
+                "text": "<h3>Novedades de la Temporada</h3>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "center",
@@ -509,7 +579,7 @@
           ]
         }
       },
-      "name": "Featured collection",
+      "name": "Novedades",
       "settings": {
         "collection": "all",
         "layout_type": "grid",
@@ -536,7 +606,7 @@
         "text_69C6UJ": {
           "type": "text",
           "settings": {
-            "text": "<h2>Premium materials and<br/>hand-selected finishing touches</h2>",
+            "text": "<h2>Recogidas con amor.<br/>Recicladas con propósito.</h2>",
             "width": "fit-content",
             "max_width": "none",
             "alignment": "left",
@@ -561,7 +631,7 @@
         "text_hzq6cM": {
           "type": "text",
           "settings": {
-            "text": "<p><a href=\"/collections/all\" title=\"All products\">Shop now</a></p>",
+            "text": "<p><a href=\"/pages/nuestra-historia\" title=\"Nuestra Historia\">Nuestra historia</a></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "right",
@@ -588,7 +658,7 @@
         "text_69C6UJ",
         "text_hzq6cM"
       ],
-      "name": "t:names.hero",
+      "name": "Sostenibilidad",
       "settings": {
         "media_type_1": "image",
         "media_type_2": "image",
@@ -610,7 +680,7 @@
         "section_height_custom": 60,
         "color_scheme": "scheme-5",
         "toggle_overlay": true,
-        "overlay_color": "#00000075",
+        "overlay_color": "#1a274475",
         "overlay_style": "gradient",
         "gradient_direction": "to top",
         "blurred_reflection": false,
@@ -665,7 +735,7 @@
               "type": "text",
               "name": "t:names.heading",
               "settings": {
-                "text": "<h2>A size for every occasion</h2>",
+                "text": "<h2>Arte que nace del mar y regresa a él</h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -691,8 +761,8 @@
               "type": "button",
               "name": "t:names.button",
               "settings": {
-                "label": "SHOP NOW",
-                "link": "shopify://collections/all",
+                "label": "NUESTRA HISTORIA",
+                "link": "/pages/nuestra-historia",
                 "open_in_new_tab": false,
                 "style_class": "link",
                 "width": "fit-content",
@@ -746,7 +816,7 @@
         "group_Q6JxNp",
         "comparison_slider_YEKHnD"
       ],
-      "name": "Size comparison ",
+      "name": "Historia — fragmento",
       "settings": {
         "content_direction": "row",
         "vertical_on_mobile": true,
