@@ -1,55 +1,5 @@
-<div class="floating-button-box">
-  {% render 'button', link: block.settings.link %}
-</div>
 
-<style>
-  .floating-button-box {
-    position: fixed;
-    right: 24px;
-    bottom: 24px;
-    z-index: 9999;
-
-    background: #ffffff;
-    padding: 16px;
-    border-radius: 18px;
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: all 0.25s ease;
-  }
-
-  .floating-button-box:hover {
-    background: #f2f2f2;
-    transform: translateY(-3px);
-    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.22);
-  }
-
-  .floating-button-box .button,
-  .floating-button-box .button-secondary,
-  .floating-button-box .link {
-    margin: 0;
-    transition: all 0.25s ease;
-  }
-
-  .floating-button-box:hover .button,
-  .floating-button-box:hover .button-secondary {
-    background-color: #d9d9d9;
-    border-color: #d9d9d9;
-    color: #111111;
-  }
-
-  @media screen and (max-width: 749px) {
-    .floating-button-box {
-      right: 16px;
-      bottom: 16px;
-      padding: 12px;
-      border-radius: 14px;
-    }
-  }
-</style>
+{% render 'button', link: block.settings.link %}
 
 {% schema %}
 {
