@@ -17,10 +17,27 @@
   <div class="sust-ldr__overlay"></div>
 
   <div class="sust-ldr__content page-width">
+    <span class="sust-ldr__eyebrow">— Compromiso sostenible —</span>
     <h2 class="sust-ldr__quote">
       Recogidas con amor.<br>
       <em>Recicladas con propósito.</em>
     </h2>
+    <div class="sust-ldr__stats">
+      <div class="sust-ldr__stat">
+        <span class="sust-ldr__stat-num">100%</span>
+        <span class="sust-ldr__stat-label">Conchas recicladas</span>
+      </div>
+      <div class="sust-ldr__sep" aria-hidden="true"></div>
+      <div class="sust-ldr__stat">
+        <span class="sust-ldr__stat-num">0</span>
+        <span class="sust-ldr__stat-label">Plásticos en el embalaje</span>
+      </div>
+      <div class="sust-ldr__sep" aria-hidden="true"></div>
+      <div class="sust-ldr__stat">
+        <span class="sust-ldr__stat-num">1</span>
+        <span class="sust-ldr__stat-label">Taller artesanal en Ribeira</span>
+      </div>
+    </div>
     <a href="{{ routes.root_url }}pages/nuestra-historia" class="sust-ldr__btn">
       Nuestra Historia
     </a>
@@ -31,11 +48,11 @@
   .sust-ldr {
     position: relative;
     width: 100%;
-    height: 70vh;
-    min-height: 480px;
+    min-height: 80vh;
     overflow: hidden;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
   }
 
   .sust-ldr__bg {
@@ -56,11 +73,10 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(
-      to top,
-      rgba(26, 39, 68, 0.90) 0%,
-      rgba(26, 39, 68, 0.45) 45%,
-      rgba(26, 39, 68, 0.10) 75%,
-      transparent 100%
+      to bottom,
+      rgba(26, 39, 68, 0.30) 0%,
+      rgba(26, 39, 68, 0.72) 50%,
+      rgba(26, 39, 68, 0.82) 100%
     );
     z-index: 1;
     pointer-events: none;
@@ -69,42 +85,93 @@
   .sust-ldr__content {
     position: relative;
     z-index: 2;
-    width: 100%;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 48px;
-    padding-bottom: 56px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 96px 2rem;
+    gap: 0;
+  }
+
+  .sust-ldr__eyebrow {
+    font-family: var(--font-body--family);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    color: #c9a84c;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1.75rem;
   }
 
   .sust-ldr__quote {
     font-family: var(--font-heading--family);
-    font-size: clamp(1.8rem, 3.5vw, 3.2rem);
+    font-size: clamp(2.4rem, 5.5vw, 4.5rem);
     font-weight: 300;
-    line-height: 1.2;
+    line-height: 1.15;
     color: #f5f0e8;
-    margin: 0;
-    max-width: 60%;
+    margin: 0 0 3.5rem;
   }
 
   .sust-ldr__quote em {
     font-style: italic;
   }
 
+  .sust-ldr__stats {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 3.5rem;
+  }
+
+  .sust-ldr__stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 0 48px;
+  }
+
+  .sust-ldr__stat-num {
+    font-family: var(--font-heading--family);
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    font-weight: 700;
+    color: #c9a84c;
+    line-height: 1;
+    display: block;
+  }
+
+  .sust-ldr__stat-label {
+    font-family: var(--font-body--family);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: rgba(245, 240, 232, 0.65);
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+  }
+
+  .sust-ldr__sep {
+    width: 1px;
+    height: 64px;
+    background: rgba(245, 240, 232, 0.18);
+    flex-shrink: 0;
+  }
+
   .sust-ldr__btn {
     display: inline-block;
     background: transparent;
     color: #f5f0e8;
-    border: 1.5px solid rgba(245, 240, 232, 0.75);
+    border: 1.5px solid rgba(245, 240, 232, 0.6);
     font-family: var(--font-body--family);
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 1rem 2.2rem;
-    white-space: nowrap;
-    flex-shrink: 0;
+    padding: 1rem 2.6rem;
     transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
   }
 
@@ -115,15 +182,23 @@
   }
 
   @media screen and (max-width: 749px) {
-    .sust-ldr__content {
+    .sust-ldr__stats {
       flex-direction: column;
-      align-items: flex-start;
-      padding-bottom: 40px;
-      gap: 28px;
+      gap: 0;
+      width: 100%;
+    }
+
+    .sust-ldr__stat {
+      padding: 24px 0;
+    }
+
+    .sust-ldr__sep {
+      width: 48px;
+      height: 1px;
     }
 
     .sust-ldr__quote {
-      max-width: 100%;
+      margin-bottom: 2.5rem;
     }
   }
 {% endstylesheet %}

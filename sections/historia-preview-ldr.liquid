@@ -1,164 +1,164 @@
-<section class="hist-prev">
-  <div class="hist-prev__inner page-width">
+<section class="prenda-ldr">
+  <div class="prenda-ldr__media">
+    {%- if section.settings.image != blank -%}
+      {{
+        section.settings.image
+        | image_url: width: 1400
+        | image_tag:
+          class: 'prenda-ldr__img',
+          widths: '600,800,1000,1400',
+          sizes: '(min-width: 750px) 50vw, 100vw',
+          loading: 'lazy',
+          alt: 'Pieza artesanal — Luz de Ribeira'
+      }}
+    {%- else -%}
+      <div class="prenda-ldr__placeholder"></div>
+    {%- endif -%}
+  </div>
 
-    <div class="hist-prev__text">
-      <h2 class="hist-prev__title">
-        Arte que nace del mar<br>
-        <em>y regresa a él</em>
-      </h2>
-      <p class="hist-prev__desc">
-        Nacimos en las playas de Ribeira, entre conchas que la marea dejaba atrás.
-        Hoy las transformamos en arte que perdura.
-      </p>
-      <a href="{{ routes.root_url }}pages/nuestra-historia" class="hist-prev__btn">
-        Nuestra Historia
-      </a>
-    </div>
-
-    <div class="hist-prev__media">
-      {%- if section.settings.image != blank -%}
-        {{
-          section.settings.image
-          | image_url: width: 1000
-          | image_tag:
-            class: 'hist-prev__img',
-            widths: '400,600,800,1000',
-            sizes: '(min-width: 750px) 45vw, 100vw',
-            loading: 'lazy',
-            alt: 'Proceso artesanal — Luz de Ribeira'
-        }}
-      {%- else -%}
-        <div class="hist-prev__placeholder">
-          <span class="hist-prev__placeholder-text">Sube una imagen del proceso artesanal</span>
-        </div>
-      {%- endif -%}
-    </div>
-
+  <div class="prenda-ldr__content">
+    <span class="prenda-ldr__eyebrow">— Pieza destacada —</span>
+    <h2 class="prenda-ldr__title">
+      Llevarte un trozo<br>
+      <em>de Galicia</em>
+    </h2>
+    <p class="prenda-ldr__desc">
+      Cada collar y cada cuadro nace de conchas recogidas en las costas de Ribeira.
+      Arte que se toca, que se siente y que perdura.
+    </p>
+    <a href="{{ routes.root_url }}collections/all" class="prenda-ldr__btn">
+      Explorar la colección
+    </a>
   </div>
 </section>
 
 {% stylesheet %}
-  .hist-prev {
-    background: #f5f0e8;
-    padding: 96px 0;
-  }
-
-  .hist-prev__inner {
+  .prenda-ldr {
     display: flex;
-    align-items: center;
-    gap: 80px;
+    min-height: 70vh;
   }
 
-  .hist-prev__text {
-    flex: 1;
+  .prenda-ldr__media {
+    flex: 0 0 52%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .prenda-ldr__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    position: absolute;
+    inset: 0;
+  }
+
+  .prenda-ldr__placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    background: linear-gradient(135deg, #d9ceba 0%, #c8b99e 100%);
+  }
+
+  .prenda-ldr__content {
+    flex: 0 0 48%;
+    background: #1a2744;
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    justify-content: center;
     align-items: flex-start;
+    padding: 80px 72px;
+    gap: 0;
   }
 
-  .hist-prev__title {
+  .prenda-ldr__eyebrow {
+    font-family: var(--font-body--family);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    color: #c9a84c;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  .prenda-ldr__title {
     font-family: var(--font-heading--family);
-    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
     font-weight: 300;
     line-height: 1.1;
-    color: #1a2744;
-    margin: 0;
+    color: #f5f0e8;
+    margin: 0 0 1.75rem;
   }
 
-  .hist-prev__title em {
+  .prenda-ldr__title em {
     font-style: italic;
   }
 
-  .hist-prev__desc {
+  .prenda-ldr__desc {
     font-family: var(--font-body--family);
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.8;
-    color: #4a5568;
-    margin: 0;
-    max-width: 380px;
+    color: rgba(245, 240, 232, 0.65);
+    margin: 0 0 2.5rem;
+    max-width: 360px;
   }
 
-  .hist-prev__btn {
+  .prenda-ldr__btn {
     display: inline-block;
-    background: transparent;
+    background: #c9a84c;
     color: #1a2744;
-    border: 1.5px solid #1a2744;
     font-family: var(--font-body--family);
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 0.9rem 2.2rem;
-    transition: background 0.25s ease, color 0.25s ease;
+    padding: 1rem 2.4rem;
+    transition: background 0.25s ease;
   }
 
-  .hist-prev__btn:hover {
-    background: #1a2744;
-    color: #f5f0e8;
-  }
-
-  .hist-prev__media {
-    flex: 1;
-    aspect-ratio: 4 / 3;
-    overflow: hidden;
-  }
-
-  .hist-prev__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  .hist-prev__placeholder {
-    width: 100%;
-    height: 100%;
-    min-height: 320px;
-    background: linear-gradient(135deg, #eae3d6 0%, #d9ceba 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 32px;
-  }
-
-  .hist-prev__placeholder-text {
-    font-family: var(--font-body--family);
-    font-size: 0.8rem;
-    color: #6b7280;
-    text-align: center;
-    font-style: italic;
+  .prenda-ldr__btn:hover {
+    background: #b89040;
   }
 
   @media screen and (max-width: 749px) {
-    .hist-prev {
-      padding: 64px 0;
-    }
-
-    .hist-prev__inner {
+    .prenda-ldr {
       flex-direction: column;
-      gap: 48px;
+      min-height: auto;
     }
 
-    .hist-prev__media {
-      width: 100%;
+    .prenda-ldr__media {
+      flex: none;
+      height: 56vw;
+      min-height: 260px;
+      position: relative;
+    }
+
+    .prenda-ldr__placeholder {
+      min-height: 260px;
+    }
+
+    .prenda-ldr__content {
+      flex: none;
+      padding: 48px 24px;
     }
   }
 {% endstylesheet %}
 
 {% schema %}
 {
-  "name": "Historia preview — Luz de Ribeira",
+  "name": "Pieza destacada — Luz de Ribeira",
   "tag": "section",
-  "class": "hist-prev-wrapper",
+  "class": "prenda-ldr-wrapper",
   "settings": [
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Imagen del proceso artesanal"
+      "label": "Foto de la pieza"
     }
   ],
-  "presets": [{ "name": "Historia preview — Luz de Ribeira" }]
+  "presets": [{ "name": "Pieza destacada — Luz de Ribeira" }]
 }
 {% endschema %}
