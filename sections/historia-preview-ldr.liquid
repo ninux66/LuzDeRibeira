@@ -1,164 +1,92 @@
-<section class="prenda-ldr">
-  <div class="prenda-ldr__media">
-    {%- if section.settings.image != blank -%}
+{%- assign dest_product = section.settings.product -%}
+
+<section style="display:flex;min-height:70vh;font-family:inherit;">
+
+  <div style="flex:0 0 52%;position:relative;overflow:hidden;background:linear-gradient(135deg,#d9ceba 0%,#c8b99e 100%);">
+    {%- if dest_product != blank and dest_product.featured_image != blank -%}
+      {{
+        dest_product.featured_image
+        | image_url: width: 1400
+        | image_tag:
+          widths: '600,800,1000,1400',
+          sizes: '(min-width: 750px) 50vw, 100vw',
+          loading: 'lazy',
+          alt: dest_product.title,
+          style: 'width:100%;height:100%;object-fit:cover;object-position:center;display:block;position:absolute;inset:0;'
+      }}
+    {%- elsif section.settings.image != blank -%}
       {{
         section.settings.image
         | image_url: width: 1400
         | image_tag:
-          class: 'prenda-ldr__img',
           widths: '600,800,1000,1400',
           sizes: '(min-width: 750px) 50vw, 100vw',
           loading: 'lazy',
-          alt: 'Pieza artesanal — Luz de Ribeira'
+          alt: 'Pieza artesanal — Luz de Ribeira',
+          style: 'width:100%;height:100%;object-fit:cover;object-position:center;display:block;position:absolute;inset:0;'
       }}
-    {%- else -%}
-      <div class="prenda-ldr__placeholder"></div>
     {%- endif -%}
   </div>
 
-  <div class="prenda-ldr__content">
-    <span class="prenda-ldr__eyebrow">— Pieza destacada —</span>
-    <h2 class="prenda-ldr__title">
-      Llevarte un trozo<br>
-      <em>de Galicia</em>
+  <div style="flex:0 0 48%;background:#f5f0e8;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:80px 72px;">
+    <span style="display:block;font-family:var(--font-body--family);font-size:0.65rem;font-weight:700;letter-spacing:0.28em;color:#c9a84c;text-transform:uppercase;margin-bottom:1.5rem;">— Pieza destacada —</span>
+    <h2 style="font-family:var(--font-heading--family);font-size:clamp(2rem,3.5vw,3.2rem);font-weight:300;line-height:1.1;color:#1a2744;margin:0 0 1.75rem;">
+      {%- if dest_product != blank -%}
+        {{ dest_product.title }}
+      {%- else -%}
+        Llevarte un trozo<br><em>de Galicia</em>
+      {%- endif -%}
     </h2>
-    <p class="prenda-ldr__desc">
-      Cada collar y cada cuadro nace de conchas recogidas en las costas de Ribeira.
-      Arte que se toca, que se siente y que perdura.
+    <p style="font-family:var(--font-body--family);font-size:0.9rem;line-height:1.8;color:rgba(26,39,68,0.65);margin:0 0 2.5rem;max-width:360px;">
+      {%- if dest_product != blank and dest_product.description != blank -%}
+        {{ dest_product.description | strip_html | truncate: 160 }}
+      {%- else -%}
+        Cada collar y cada cuadro nace de conchas recogidas en las costas de Ribeira.
+        Arte que se toca, que se siente y que perdura.
+      {%- endif -%}
     </p>
-    <a href="{{ routes.root_url }}collections/all" class="prenda-ldr__btn">
-      Explorar la colección
+    <a href="{%- if dest_product != blank -%}{{ dest_product.url }}{%- else -%}{{ routes.root_url }}collections/all{%- endif -%}" style="display:inline-block;background:#1a2744;color:#f5f0e8;font-family:var(--font-body--family);font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;padding:1rem 2.4rem;">
+      {%- if dest_product != blank -%}Ver la pieza{%- else -%}Explorar la colección{%- endif -%}
     </a>
   </div>
+
 </section>
 
 {% stylesheet %}
-  .prenda-ldr {
-    display: flex;
-    min-height: 70vh;
-  }
-
-  .prenda-ldr__media {
-    flex: 0 0 52%;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .prenda-ldr__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    position: absolute;
-    inset: 0;
-  }
-
-  .prenda-ldr__placeholder {
-    width: 100%;
-    height: 100%;
-    min-height: 480px;
-    background: linear-gradient(135deg, #d9ceba 0%, #c8b99e 100%);
-  }
-
-  .prenda-ldr__content {
-    flex: 0 0 48%;
-    background: #1a2744;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 80px 72px;
-    gap: 0;
-  }
-
-  .prenda-ldr__eyebrow {
-    font-family: var(--font-body--family);
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.28em;
-    color: #c9a84c;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 1.5rem;
-  }
-
-  .prenda-ldr__title {
-    font-family: var(--font-heading--family);
-    font-size: clamp(2rem, 3.5vw, 3.2rem);
-    font-weight: 300;
-    line-height: 1.1;
-    color: #f5f0e8;
-    margin: 0 0 1.75rem;
-  }
-
-  .prenda-ldr__title em {
-    font-style: italic;
-  }
-
-  .prenda-ldr__desc {
-    font-family: var(--font-body--family);
-    font-size: 0.9rem;
-    line-height: 1.8;
-    color: rgba(245, 240, 232, 0.65);
-    margin: 0 0 2.5rem;
-    max-width: 360px;
-  }
-
-  .prenda-ldr__btn {
-    display: inline-block;
-    background: #c9a84c;
-    color: #1a2744;
-    font-family: var(--font-body--family);
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1rem 2.4rem;
-    transition: background 0.25s ease;
-  }
-
-  .prenda-ldr__btn:hover {
-    background: #b89040;
-  }
-
   @media screen and (max-width: 749px) {
-    .prenda-ldr {
-      flex-direction: column;
-      min-height: auto;
+    .prenda-ldr-wrapper > section {
+      flex-direction: column !important;
+      min-height: auto !important;
     }
-
-    .prenda-ldr__media {
-      flex: none;
-      height: 56vw;
-      min-height: 260px;
-      position: relative;
+    .prenda-ldr-wrapper > section > div:first-child {
+      flex: none !important;
+      height: 60vw;
+      min-height: 240px;
     }
-
-    .prenda-ldr__placeholder {
-      min-height: 260px;
-    }
-
-    .prenda-ldr__content {
-      flex: none;
-      padding: 48px 24px;
+    .prenda-ldr-wrapper > section > div:last-child {
+      flex: none !important;
+      padding: 48px 24px !important;
     }
   }
 {% endstylesheet %}
 
 {% schema %}
 {
-  "name": "Pieza destacada — Luz de Ribeira",
+  "name": "Pieza destacada",
   "tag": "section",
   "class": "prenda-ldr-wrapper",
   "settings": [
     {
+      "type": "product",
+      "id": "product",
+      "label": "Producto destacado"
+    },
+    {
       "type": "image_picker",
       "id": "image",
-      "label": "Foto de la pieza"
+      "label": "Imagen manual (si no hay producto)"
     }
   ],
-  "presets": [{ "name": "Pieza destacada — Luz de Ribeira" }]
+  "presets": [{ "name": "Pieza destacada" }]
 }
 {% endschema %}

@@ -123,6 +123,8 @@
     grid-template-columns: 1fr 1.2fr 1fr;
     gap: 56px;
     padding-bottom: 64px;
+    padding-left: clamp(24px, 5vw, 80px);
+    padding-right: clamp(24px, 5vw, 80px);
   }
 
   /* Brand */
@@ -238,22 +240,26 @@
   .footer-ldr__form-row {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid rgba(245, 240, 232, 0.3);
+    border-bottom: 1.5px solid rgba(245, 240, 232, 0.4);
+    margin-top: 4px;
   }
 
   .footer-ldr__input {
     flex: 1;
-    background: transparent;
+    background: transparent !important;
+    background-color: transparent !important;
     border: none;
     outline: none;
-    color: #f5f0e8;
+    color: #f5f0e8 !important;
     font-family: var(--font-body--family);
     font-size: 0.85rem;
     padding: 10px 0;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
   }
 
   .footer-ldr__input::placeholder {
-    color: rgba(245, 240, 232, 0.35);
+    color: rgba(245, 240, 232, 0.4) !important;
   }
 
   .footer-ldr__submit {
@@ -285,7 +291,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    padding: 20px 0;
+    padding: 20px clamp(24px, 5vw, 80px);
     border-top: 1px solid rgba(245, 240, 232, 0.1);
   }
 
