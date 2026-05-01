@@ -1,4 +1,7 @@
 <div class="footer-ldr">
+
+  <div class="footer-ldr__accent-bar" aria-hidden="true"></div>
+
   <div class="footer-ldr__top page-width">
 
     <div class="footer-ldr__brand">
@@ -6,7 +9,7 @@
         {%- if settings.logo != blank -%}
           {{
             settings.logo
-            | image_url: height: 52
+            | image_url: height: 56
             | image_tag:
               class: 'footer-ldr__logo-img',
               alt: shop.name,
@@ -20,6 +23,24 @@
         Artesanía marina hecha a mano<br>
         desde Ribeira, Galicia.
       </p>
+      <div class="footer-ldr__brand-social">
+        {%- if section.settings.instagram_url != blank -%}
+          <a href="{{ section.settings.instagram_url }}" class="footer-ldr__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+            </svg>
+          </a>
+        {%- endif -%}
+        {%- if section.settings.pinterest_url != blank -%}
+          <a href="{{ section.settings.pinterest_url }}" class="footer-ldr__social-link" aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.03-2.83.19-.77 1.28-5.43 1.28-5.43s-.33-.65-.33-1.62c0-1.52.88-2.66 1.97-2.66.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.54 1.97 1.61 1.97 1.93 0 3.42-2.04 3.42-4.97 0-2.6-1.87-4.42-4.54-4.42-3.09 0-4.91 2.32-4.91 4.72 0 .93.36 1.94.8 2.48.09.11.1.2.07.31-.08.33-.26 1.09-.3 1.24-.05.2-.17.24-.38.15-1.44-.67-2.34-2.78-2.34-4.48 0-3.64 2.64-6.98 7.62-6.98 4 0 7.11 2.85 7.11 6.66 0 3.97-2.5 7.17-5.97 7.17-1.17 0-2.27-.61-2.64-1.32l-.72 2.69c-.26 1-.96 2.26-1.43 3.02.94.29 1.93.45 2.95.45 5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
+            </svg>
+          </a>
+        {%- endif -%}
+      </div>
     </div>
 
     <nav class="footer-ldr__nav" aria-label="Navegación footer">
@@ -53,6 +74,7 @@
     </nav>
 
     <div class="footer-ldr__newsletter">
+      <span class="footer-ldr__nl-eyebrow">— Newsletter —</span>
       <h3 class="footer-ldr__nl-heading">Recibe las novedades</h3>
       <p class="footer-ldr__nl-desc">
         Nuevas piezas, historias de la costa y acceso anticipado a ediciones limitadas.
@@ -95,34 +117,28 @@
         <li><a href="{{ shop.shipping_policy.url }}">{{ shop.shipping_policy.title }}</a></li>
       {%- endif -%}
     </ul>
-    <div class="footer-ldr__social">
-      <a href="https://www.instagram.com/" class="footer-ldr__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
-        </svg>
-      </a>
-      <a href="https://www.pinterest.com/" class="footer-ldr__social-link" aria-label="Pinterest" target="_blank" rel="noopener noreferrer">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.03-2.83.19-.77 1.28-5.43 1.28-5.43s-.33-.65-.33-1.62c0-1.52.88-2.66 1.97-2.66.93 0 1.38.7 1.38 1.54 0 .94-.6 2.34-.91 3.64-.26 1.09.54 1.97 1.61 1.97 1.93 0 3.42-2.04 3.42-4.97 0-2.6-1.87-4.42-4.54-4.42-3.09 0-4.91 2.32-4.91 4.72 0 .93.36 1.94.8 2.48.09.11.1.2.07.31-.08.33-.26 1.09-.3 1.24-.05.2-.17.24-.38.15-1.44-.67-2.34-2.78-2.34-4.48 0-3.64 2.64-6.98 7.62-6.98 4 0 7.11 2.85 7.11 6.66 0 3.97-2.5 7.17-5.97 7.17-1.17 0-2.27-.61-2.64-1.32l-.72 2.69c-.26 1-.96 2.26-1.43 3.02.94.29 1.93.45 2.95.45 5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
-        </svg>
-      </a>
-    </div>
+    <p class="footer-ldr__made-in">Hecho a mano en Ribeira, Galicia</p>
   </div>
 </div>
 
 {% stylesheet %}
   .footer-ldr {
     background: #1a2744;
-    padding-top: 80px;
+    padding-top: 0;
+  }
+
+  .footer-ldr__accent-bar {
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, #c9a84c 30%, #c9a84c 70%, transparent 100%);
+    opacity: 0.7;
   }
 
   .footer-ldr__top {
     display: grid;
-    grid-template-columns: 1fr 1.2fr 1fr;
-    gap: 56px;
-    padding-bottom: 64px;
+    grid-template-columns: 1.1fr 1fr 1.2fr;
+    gap: 64px;
+    padding-top: 72px;
+    padding-bottom: 72px;
     padding-left: clamp(24px, 5vw, 80px);
     padding-right: clamp(24px, 5vw, 80px);
   }
@@ -141,7 +157,7 @@
 
   .footer-ldr__logo-img {
     display: block;
-    max-height: 52px;
+    max-height: 56px;
     width: auto;
     filter: brightness(0) invert(1);
     opacity: 0.9;
@@ -163,26 +179,36 @@
     margin: 0;
   }
 
+  .footer-ldr__brand-social {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-top: 6px;
+  }
+
   /* Navigation */
   .footer-ldr__nav {
     display: flex;
     gap: 48px;
+    padding-top: 4px;
   }
 
   .footer-ldr__nav-col {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 0;
   }
 
   .footer-ldr__nav-heading {
     font-family: var(--font-body--family);
-    font-size: 0.62rem;
+    font-size: 0.6rem;
     font-weight: 700;
-    letter-spacing: 0.26em;
+    letter-spacing: 0.28em;
     color: #c9a84c;
     text-transform: uppercase;
-    margin: 0;
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.25);
   }
 
   .footer-ldr__nav-list {
@@ -191,42 +217,69 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 11px;
+    gap: 13px;
   }
 
   .footer-ldr__nav-link {
     font-family: var(--font-body--family);
     font-size: 0.875rem;
-    color: rgba(245, 240, 232, 0.65);
+    color: rgba(245, 240, 232, 0.6);
     text-decoration: none;
     transition: color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .footer-ldr__nav-link::before {
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 1px;
+    background: rgba(201, 168, 76, 0);
+    transition: background 0.2s ease, width 0.2s ease;
+    flex-shrink: 0;
   }
 
   .footer-ldr__nav-link:hover {
     color: #f5f0e8;
   }
 
+  .footer-ldr__nav-link:hover::before {
+    background: #c9a84c;
+  }
+
   /* Newsletter */
   .footer-ldr__newsletter {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
+    padding-top: 4px;
+  }
+
+  .footer-ldr__nl-eyebrow {
+    font-family: var(--font-body--family);
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.28em;
+    color: rgba(201, 168, 76, 0.7);
+    text-transform: uppercase;
   }
 
   .footer-ldr__nl-heading {
     font-family: var(--font-heading--family);
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     font-weight: 400;
     color: #f5f0e8;
     margin: 0;
-    line-height: 1.3;
+    line-height: 1.25;
   }
 
   .footer-ldr__nl-desc {
     font-family: var(--font-body--family);
     font-size: 0.8rem;
-    line-height: 1.65;
-    color: rgba(245, 240, 232, 0.55);
+    line-height: 1.7;
+    color: rgba(245, 240, 232, 0.5);
     margin: 0;
   }
 
@@ -234,14 +287,18 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: 4px;
+    margin-top: 6px;
   }
 
   .footer-ldr__form-row {
     display: flex;
     align-items: center;
-    border-bottom: 1.5px solid rgba(245, 240, 232, 0.4);
-    margin-top: 4px;
+    border-bottom: 1.5px solid rgba(245, 240, 232, 0.35);
+    transition: border-color 0.2s ease;
+  }
+
+  .footer-ldr__form-row:focus-within {
+    border-color: #c9a84c;
   }
 
   .footer-ldr__input {
@@ -259,14 +316,14 @@
   }
 
   .footer-ldr__input::placeholder {
-    color: rgba(245, 240, 232, 0.4) !important;
+    color: rgba(245, 240, 232, 0.35) !important;
   }
 
   .footer-ldr__submit {
     background: transparent;
     border: none;
     cursor: pointer;
-    color: #c9a84c;
+    color: rgba(201, 168, 76, 0.7);
     padding: 10px 0 10px 14px;
     display: flex;
     align-items: center;
@@ -275,7 +332,7 @@
   }
 
   .footer-ldr__submit:hover {
-    color: #f5f0e8;
+    color: #c9a84c;
   }
 
   .footer-ldr__success {
@@ -285,20 +342,33 @@
     margin: 0;
   }
 
+  /* Social links (inside brand column) */
+  .footer-ldr__social-link {
+    color: rgba(245, 240, 232, 0.35);
+    display: flex;
+    align-items: center;
+    transition: color 0.2s ease;
+    text-decoration: none;
+  }
+
+  .footer-ldr__social-link:hover {
+    color: #c9a84c;
+  }
+
   /* Bottom bar */
   .footer-ldr__bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    padding: 20px clamp(24px, 5vw, 80px);
-    border-top: 1px solid rgba(245, 240, 232, 0.1);
+    padding: 22px clamp(24px, 5vw, 80px);
+    border-top: 1px solid rgba(245, 240, 232, 0.08);
   }
 
   .footer-ldr__copyright {
     font-family: var(--font-body--family);
-    font-size: 0.72rem;
-    color: rgba(245, 240, 232, 0.35);
+    font-size: 0.7rem;
+    color: rgba(245, 240, 232, 0.3);
     margin: 0;
   }
 
@@ -313,32 +383,23 @@
 
   .footer-ldr__policies a {
     font-family: var(--font-body--family);
-    font-size: 0.72rem;
-    color: rgba(245, 240, 232, 0.35);
+    font-size: 0.7rem;
+    color: rgba(245, 240, 232, 0.3);
     text-decoration: none;
     transition: color 0.2s ease;
   }
 
   .footer-ldr__policies a:hover {
-    color: rgba(245, 240, 232, 0.65);
+    color: rgba(245, 240, 232, 0.6);
   }
 
-  .footer-ldr__social {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-  }
-
-  .footer-ldr__social-link {
-    color: rgba(245, 240, 232, 0.45);
-    display: flex;
-    align-items: center;
-    transition: color 0.2s ease;
-    text-decoration: none;
-  }
-
-  .footer-ldr__social-link:hover {
-    color: #c9a84c;
+  .footer-ldr__made-in {
+    font-family: var(--font-body--family);
+    font-size: 0.65rem;
+    color: rgba(245, 240, 232, 0.22);
+    margin: 0;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
   }
 
   @media screen and (max-width: 999px) {
@@ -353,14 +414,11 @@
   }
 
   @media screen and (max-width: 749px) {
-    .footer-ldr {
-      padding-top: 56px;
-    }
-
     .footer-ldr__top {
       grid-template-columns: 1fr;
       gap: 40px;
-      padding-bottom: 48px;
+      padding-top: 56px;
+      padding-bottom: 52px;
     }
 
     .footer-ldr__brand {
@@ -370,21 +428,40 @@
     .footer-ldr__bottom {
       flex-direction: column;
       align-items: flex-start;
-      gap: 14px;
+      gap: 12px;
     }
 
     .footer-ldr__policies {
       gap: 12px;
+    }
+
+    .footer-ldr__made-in {
+      display: none;
     }
   }
 {% endstylesheet %}
 
 {% schema %}
 {
-  "name": "Footer — Luz de Ribeira",
+  "name": "Footer LDR",
   "tag": "div",
   "class": "footer-ldr-wrapper",
-  "settings": [],
-  "presets": [{ "name": "Footer — Luz de Ribeira" }]
+  "settings": [
+    {
+      "type": "header",
+      "content": "Redes sociales"
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "URL de Instagram"
+    },
+    {
+      "type": "url",
+      "id": "pinterest_url",
+      "label": "URL de Pinterest"
+    }
+  ],
+  "presets": [{ "name": "Footer LDR" }]
 }
 {% endschema %}
