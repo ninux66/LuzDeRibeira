@@ -427,74 +427,12 @@
       }
     },
     "hero_MVUtj6": {
-      "type": "hero",
-      "blocks": {
-        "text_69C6UJ": {
-          "type": "text",
-          "settings": {
-            "text": "<h1>Recogidas con amor.<br/><em>Recicladas con propósito.</em></h1>",
-            "width": "fit-content",
-            "max_width": "none",
-            "alignment": "left",
-            "type_preset": "h3",
-            "font": "var(--font-primary--family)",
-            "font_size": ""
-          },
-          "blocks": {}
-        },
-        "text_hzq6cM": {
-          "type": "button",
-          "name": "CTA Nuestra Historia",
-          "settings": {
-            "label": "NUESTRA HISTORIA",
-            "link": "/pages/nuestra-historia",
-            "open_in_new_tab": false,
-            "style_class": "secondary",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_69C6UJ",
-        "text_hzq6cM"
-      ],
-      "name": "Sostenibilidad — Imagen de fondo",
-      "settings": {
-        "media_type_1": "image",
-        "image_1": "shopify://shop_images/IMG_4688.jpg",
-        "media_type_2": "image",
-        "stack_media_on_mobile": false,
-        "custom_mobile_media": false,
-        "media_type_1_mobile": "image",
-        "media_type_2_mobile": "image",
-        "link": "",
-        "open_in_new_tab": false,
-        "content_direction": "row",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "space-between",
-        "vertical_alignment": "flex-end",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "flex-end",
-        "gap": 16,
-        "section_width": "page-width",
-        "section_height": "large",
-        "section_height_custom": 60,
-        "color_scheme": "scheme-5",
-        "toggle_overlay": true,
-        "overlay_color": "#1a274475",
-        "overlay_style": "gradient",
-        "gradient_direction": "to top",
-        "blurred_reflection": false,
-        "reflection_opacity": 75,
-        "padding-block-start": 0,
-        "padding-block-end": 40
-      }
-    },
+  "type": "sustainability-ldr",
+  "settings": {
+    "image": "shopify://shop_images/IMG_4688.jpg"
+  }
+},
+
     "section_F9fMc4": {
       "type": "section",
       "blocks": {
