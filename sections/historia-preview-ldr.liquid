@@ -1,0 +1,164 @@
+<section class="hist-prev">
+  <div class="hist-prev__inner page-width">
+
+    <div class="hist-prev__text">
+      <h2 class="hist-prev__title">
+        Arte que nace del mar<br>
+        <em>y regresa a él</em>
+      </h2>
+      <p class="hist-prev__desc">
+        Nacimos en las playas de Ribeira, entre conchas que la marea dejaba atrás.
+        Hoy las transformamos en arte que perdura.
+      </p>
+      <a href="{{ routes.root_url }}pages/nuestra-historia" class="hist-prev__btn">
+        Nuestra Historia
+      </a>
+    </div>
+
+    <div class="hist-prev__media">
+      {%- if section.settings.image != blank -%}
+        {{
+          section.settings.image
+          | image_url: width: 1000
+          | image_tag:
+            class: 'hist-prev__img',
+            widths: '400,600,800,1000',
+            sizes: '(min-width: 750px) 45vw, 100vw',
+            loading: 'lazy',
+            alt: 'Proceso artesanal — Luz de Ribeira'
+        }}
+      {%- else -%}
+        <div class="hist-prev__placeholder">
+          <span class="hist-prev__placeholder-text">Sube una imagen del proceso artesanal</span>
+        </div>
+      {%- endif -%}
+    </div>
+
+  </div>
+</section>
+
+{% stylesheet %}
+  .hist-prev {
+    background: #f5f0e8;
+    padding: 96px 0;
+  }
+
+  .hist-prev__inner {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .hist-prev__text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    align-items: flex-start;
+  }
+
+  .hist-prev__title {
+    font-family: var(--font-heading--family);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: #1a2744;
+    margin: 0;
+  }
+
+  .hist-prev__title em {
+    font-style: italic;
+  }
+
+  .hist-prev__desc {
+    font-family: var(--font-body--family);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #4a5568;
+    margin: 0;
+    max-width: 380px;
+  }
+
+  .hist-prev__btn {
+    display: inline-block;
+    background: transparent;
+    color: #1a2744;
+    border: 1.5px solid #1a2744;
+    font-family: var(--font-body--family);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.9rem 2.2rem;
+    transition: background 0.25s ease, color 0.25s ease;
+  }
+
+  .hist-prev__btn:hover {
+    background: #1a2744;
+    color: #f5f0e8;
+  }
+
+  .hist-prev__media {
+    flex: 1;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+  }
+
+  .hist-prev__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hist-prev__placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    background: linear-gradient(135deg, #eae3d6 0%, #d9ceba 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+  }
+
+  .hist-prev__placeholder-text {
+    font-family: var(--font-body--family);
+    font-size: 0.8rem;
+    color: #6b7280;
+    text-align: center;
+    font-style: italic;
+  }
+
+  @media screen and (max-width: 749px) {
+    .hist-prev {
+      padding: 64px 0;
+    }
+
+    .hist-prev__inner {
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .hist-prev__media {
+      width: 100%;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Historia preview — Luz de Ribeira",
+  "tag": "section",
+  "class": "hist-prev-wrapper",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen del proceso artesanal"
+    }
+  ],
+  "presets": [{ "name": "Historia preview — Luz de Ribeira" }]
+}
+{% endschema %}

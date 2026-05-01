@@ -1,0 +1,145 @@
+<section class="sust-ldr">
+  {%- if section.settings.image != blank -%}
+    <div class="sust-ldr__bg">
+      {{
+        section.settings.image
+        | image_url: width: 3840
+        | image_tag:
+          class: 'sust-ldr__img',
+          widths: '800,1200,1600,1920,2560',
+          sizes: '100vw',
+          loading: 'lazy',
+          alt: 'Conchas de las costas gallegas — Luz de Ribeira'
+      }}
+    </div>
+  {%- endif -%}
+
+  <div class="sust-ldr__overlay"></div>
+
+  <div class="sust-ldr__content page-width">
+    <h2 class="sust-ldr__quote">
+      Recogidas con amor.<br>
+      <em>Recicladas con propósito.</em>
+    </h2>
+    <a href="{{ routes.root_url }}pages/nuestra-historia" class="sust-ldr__btn">
+      Nuestra Historia
+    </a>
+  </div>
+</section>
+
+{% stylesheet %}
+  .sust-ldr {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    min-height: 480px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .sust-ldr__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .sust-ldr__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+
+  .sust-ldr__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(26, 39, 68, 0.90) 0%,
+      rgba(26, 39, 68, 0.45) 45%,
+      rgba(26, 39, 68, 0.10) 75%,
+      transparent 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .sust-ldr__content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 48px;
+    padding-bottom: 56px;
+  }
+
+  .sust-ldr__quote {
+    font-family: var(--font-heading--family);
+    font-size: clamp(1.8rem, 3.5vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: #f5f0e8;
+    margin: 0;
+    max-width: 60%;
+  }
+
+  .sust-ldr__quote em {
+    font-style: italic;
+  }
+
+  .sust-ldr__btn {
+    display: inline-block;
+    background: transparent;
+    color: #f5f0e8;
+    border: 1.5px solid rgba(245, 240, 232, 0.75);
+    font-family: var(--font-body--family);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2.2rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+  }
+
+  .sust-ldr__btn:hover {
+    background: #c9a84c;
+    border-color: #c9a84c;
+    color: #1a2744;
+  }
+
+  @media screen and (max-width: 749px) {
+    .sust-ldr__content {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: 40px;
+      gap: 28px;
+    }
+
+    .sust-ldr__quote {
+      max-width: 100%;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Sostenibilidad — Luz de Ribeira",
+  "tag": "section",
+  "class": "sust-ldr-wrapper",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen de fondo"
+    }
+  ],
+  "presets": [{ "name": "Sostenibilidad — Luz de Ribeira" }]
+}
+{% endschema %}
